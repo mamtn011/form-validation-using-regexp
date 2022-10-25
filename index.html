@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      #container {
+        width: fit-content;
+        margin-top: 20px;
+      }
+
+      .jumbotron {
+        padding: 2rem 3rem;
+        margin-bottom: 2rem;
+        background-color: #e9ecef;
+        border-radius: 0.3rem;
+      }
+
+      /* .box {
+            background-color: #1D9BF0;
+        } */
+
+      h1 {
+        /* background-color: #015186; */
+        color: #015186;
+      }
+      #signUpBtn,
+      .genpass {
+        background-color: #015186;
+        border-color: #015186;
+        color: #fff;
+        border-radius: 3rem;
+      }
+
+      .success {
+        color: green;
+      }
+
+      .failure {
+        color: red;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="jumbotron">
+        <h1 class="text-center mb-4" style="font-size: 40pt">
+          <strong>Create Profile</strong>
+        </h1>
+        <div class="mt-3" id="messageWrapper"></div>
+        <form class="signUpForm" novalidate>
+          <div class="row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                placeholder="Name"
+              />
+              <small id="nameMsg">Ex: Mustakim Al Mobin</small>
+            </div>
+          </div>
+          <div class="col mt-4">
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="username"
+              placeholder="Username"
+            />
+            <small id="usernameMsg">Ex: mobin_505</small>
+          </div>
+          <div class="col mt-4">
+            <input
+              type="text"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <small id="emailMsg">Ex: abcdefg@gmail.com</small>
+          </div>
+          <div class="col mt-4">
+            <input
+              type="text"
+              class="form-control"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+            />
+            <small id="phoneMsg">Ex: +8801744-442244</small>
+          </div>
+          <div class="col mt-4">
+            <input
+              type="text"
+              class="form-control"
+              name="weblink"
+              id="weblink"
+              placeholder="Facebook profile slug"
+              required
+            />
+            <small id="weblinkMsg">Ex: mustakim.mobin.123 </small>
+          </div>
+          <div class="row mt-4 passwordGenerator">
+            <div class="col-5">
+              <input
+                type="text"
+                class="form-control"
+                name="generated"
+                id="generated"
+                placeholder="Click on Generate"
+              />
+            </div>
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-info form-control genpass generate"
+                id="genPass"
+              >
+                Generate
+              </button>
+              <small id="confirmMsg"></small>
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                class="btn btn-info form-control genpass copy"
+                id="copy"
+              >
+                Copy
+              </button>
+              <small id="confirmMsg"></small>
+            </div>
+            <small id="generateMsg">Generate Strong Password</small>
+          </div>
+          <div class="row mt-4">
+            <div class="col-6">
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+              <small id="passwordMsg">Letters-numbers-sign</small>
+            </div>
+            <div class="col-6">
+              <input
+                type="password"
+                class="form-control"
+                name="confirm"
+                id="confirm"
+                placeholder="Confirm"
+              />
+              <small id="confirmMsg"></small>
+            </div>
+          </div>
+          <div class="col my-4">
+            <button
+              type="submit"
+              class="btn btn-dark form-control"
+              id="signUpBtn"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+        <span class="successMsg"></span>
+        <div class="showProfile"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
